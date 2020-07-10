@@ -2,7 +2,6 @@ const mongo = require('mongodb');
 const mongoClient = mongo.MongoClient;
 
 const connectionUrl = process.env.MONGODB_URL;
-const db_name = process.env.MONGODB_DB_NAME;
 
 mongoClient.connect(connectionUrl, (err, client) => {
     if(!err) {

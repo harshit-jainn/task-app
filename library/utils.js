@@ -1,4 +1,4 @@
 const mongoose = require('mongoose');
-const url = process.env.MONGODB_URL + '/' + process.env.MONGOOSE_DB_NAME;
+const url = process.env.MONGODB_URL;
 mongoose.connect(url, {useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false});
 module.exports = mongoose;
