@@ -6,7 +6,10 @@
   "scripts": {
     "start": "node app.js",
     "dev": "env-cmd -f ./env/dev.env nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "env-cmd -f ./env/test.env jest --watch -runInBand --detectOpenHandles"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "author": "",
   "license": "ISC",
@@ -23,6 +26,8 @@
     "validator": "^13.1.1"
   },
   "devDependencies": {
-    "env-cmd": "^10.1.0"
+    "env-cmd": "^10.1.0",
+    "jest": "^26.1.0",
+    "supertest": "^4.0.2"
   }
 }
